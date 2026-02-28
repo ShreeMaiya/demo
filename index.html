@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreesha Maiya — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav>
+    <a href="#hero" class="brand">Shreesha Maiya</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="container">
+      <h1>Shreesha Maiya</h1>
+      <p class="tagline">
+        Computer Science &amp; Engineering Graduate
+      </p>
+
+      <div class="contact-chips">
+
+        <!-- Phone – copy to clipboard -->
+        <button class="chip" data-copy="+91 8762485792" aria-label="Copy phone number">
+          <i class="fa-solid fa-phone"></i>
+          +91 8762485792
+          <span class="tooltip">Copied!</span>
+        </button>
+
+        <!-- Email – copy to clipboard -->
+        <button class="chip" data-copy="shreemaiya247@gmail.com" aria-label="Copy email">
+          <i class="fa-solid fa-envelope"></i>
+          shreemaiya247@gmail.com
+          <span class="tooltip">Copied!</span>
+        </button>
+
+        <!-- LinkedIn – external link -->
+        <a class="chip" href="https://linkedin.com/in/shreemaiya" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+
+        <!-- GitHub – external link -->
+        <a class="chip" href="https://github.com/ShreeMaiya" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ──────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Computer Science and Engineering graduate with solid academic knowledge and practical
+        experience in software development. Skilled in programming and web technologies, focused
+        on using technology to solve real-world problems. Currently seeking opportunities to
+        contribute to impactful projects and grow as a software developer.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Skills ─────────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skill-grid">
+
+        <div class="skill-row">
+          <span class="skill-label">Languages</span>
+          <div class="skill-tags">
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-label">Web &amp; Frameworks</span>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React.js</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-label">Database</span>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-label">Tools &amp; IDE</span>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-label">Coursework</span>
+          <div class="skill-tags">
+            <span class="tag">Data Structures</span>
+            <span class="tag">DBMS</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Operating Systems</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education ──────────────────────────────────────────── -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-card">
+        <div class="edu-left">
+          <h3>Shri Madhwa Vadiraja Institute of Technology &amp; Management, Udupi</h3>
+          <p>Bachelor of Engineering — Computer Science and Engineering</p>
+        </div>
+        <span class="edu-badge">2021 – 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+
+        <!-- Phone -->
+        <div class="contact-card" data-copy="+91 8762485792" role="button" tabindex="0"
+             aria-label="Copy phone number">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <div class="cc-label">Phone</div>
+            <div class="cc-value">+91 8762485792</div>
+          </div>
+          <span class="tooltip">Copied!</span>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-card" data-copy="shreemaiya247@gmail.com" role="button" tabindex="0"
+             aria-label="Copy email address">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <div class="cc-label">Email</div>
+            <div class="cc-value">shreemaiya247@gmail.com</div>
+          </div>
+          <span class="tooltip">Copied!</span>
+        </div>
+
+        <!-- LinkedIn -->
+        <a class="contact-card" href="https://linkedin.com/in/shreemaiya" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <div class="cc-label">LinkedIn</div>
+            <div class="cc-value">linkedin.com/in/shreemaiya</div>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a class="contact-card" href="https://github.com/ShreeMaiya" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+          <div>
+            <div class="cc-label">GitHub</div>
+            <div class="cc-value">github.com/ShreeMaiya</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
