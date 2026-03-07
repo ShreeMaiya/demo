@@ -35,6 +35,8 @@ body.dark #hero {
 
 body.dark .skill-row,
 body.dark .edu-card,
+body.dark .intern-card,
+body.dark .project-card,
 body.dark .contact-card {
   background: #1a1a2e;
 }
@@ -310,6 +312,116 @@ section:nth-child(even) { background: var(--surface); }
   padding: .3rem .8rem;
   border-radius: 50px;
   white-space: nowrap;
+}
+
+/* ── Internships ─────────────────────────────────────────────── */
+.intern-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intern-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.intern-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: .85rem;
+}
+
+.intern-left h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: .2rem;
+}
+
+.intern-company {
+  font-size: .9rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.intern-desc {
+  font-size: .95rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Projects ─────────────────────────────────────────────────── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  transition: border-color .2s, box-shadow .2s, transform .15s;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 18px rgba(79,70,229,.15);
+  transform: translateY(-2px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .75rem;
+  margin-bottom: .25rem;
+}
+
+.project-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  background: var(--accent-lt);
+  border: 1px solid var(--border);
+  padding: .25rem .65rem;
+  border-radius: 50px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .2s, color .2s;
+}
+
+.project-link:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.project-desc {
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 /* ── Contact ──────────────────────────────────────────────────── */
