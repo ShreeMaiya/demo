@@ -1,0 +1,11 @@
+name = "todo-analytics-consumer"
+main = "src/index.js"
+compatibility_date = "2026-03-21"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "todo-db"
+database_id = "45528eb8-c87d-446e-babf-49b74364bf08"
+
+[[queues.consumers]]
+queue = "todo-analytics-queue"

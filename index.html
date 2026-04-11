@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-default-section="todos">
+  <main class="app">
+    <!-- Top bar with app title and theme switch. -->
+    <header class="app-header">
+      <h1>Cloudflare Proof of Concepts</h1>
+      <div class="header-actions">
+        <div class="section-switcher" role="tablist" aria-label="App sections">
+          <button class="section-tab" type="button" data-section-tab="todos" aria-pressed="true">Todos</button>
+          <button class="section-tab" type="button" data-section-tab="analytics" aria-pressed="false">Analytics</button>
+          <button class="section-tab" type="button" data-section-tab="counter" aria-pressed="false">Counter</button>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Todo section: input form, status message, and list rendering target. -->
+    <section id="todos-section" class="content-section" data-section-panel="todos" aria-label="Todo section">
+      <form id="todo-form" class="todo-form" autocomplete="off">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="Add a new task..."
+          maxlength="200"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <p id="message" class="message" aria-live="polite"></p>
+
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+
+    <section class="content-section analytics-panel" data-section-panel="analytics" aria-label="Analytics dashboard">
+      <div class="analytics-header">
+        <div>
+          <h2>Queue Activity</h2>
+          <p id="analytics-status" class="analytics-status">Loading queue-backed activity...</p>
+        </div>
+        <button id="analytics-refresh" class="analytics-refresh" type="button">Refresh</button>
+      </div>
+
+      <div id="analytics-counts" class="analytics-counts" aria-live="polite"></div>
+
+      <ul id="analytics-events" class="analytics-events"></ul>
+    </section>
+
+    <section id="counter-section" class="content-section counter-section" data-section-panel="counter" aria-label="Counter section">
+      <div class="counter-copy">
+        <h2>Durable Object Counter</h2>
+        <p>State here is isolated from todos and stored in a separate Durable Object.</p>
+      </div>
+
+      <div class="counter-card">
+        <div class="counter-value" id="counter-value">0</div>
+        <p id="counter-message" class="message" aria-live="polite"></p>
+
+        <div class="counter-actions">
+          <button id="counter-increment" class="counter-button counter-button-primary" type="button">
+            Increment
+          </button>
+          <button id="counter-reset" class="counter-button" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

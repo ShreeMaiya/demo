@@ -1,0 +1,17 @@
+name = "todo-pages-app"
+compatibility_date = "2026-03-21"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "todo-db"
+database_id = "45528eb8-c87d-446e-babf-49b74364bf08"
+
+[[queues.producers]]
+binding = "ANALYTICS_QUEUE"
+queue = "todo-analytics-queue"
+
+[[durable_objects.bindings]]
+name = "COUNTER"
+class_name = "Counter"
+script_name = "counter-worker"
